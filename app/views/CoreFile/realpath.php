@@ -1,0 +1,6 @@
+<pre>
+realpath('..') = 
+
+<?=realpath('..')?>
+
+</pre>

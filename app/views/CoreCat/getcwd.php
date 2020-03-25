@@ -1,0 +1,5 @@
+<pre>
+getcwd() = 
+
+<?=getcwd()?>
+</pre>
