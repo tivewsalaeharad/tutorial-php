@@ -1,36 +1,36 @@
 <? $items = array(
     array(
-        'icon' => 'glyphicon-cloud',
+        'icon' => 'fa-code',
         'caption' => 'Массивы',
         'controller' => 'corearray',
         'content' => ['array_slice', 'array_chunk'],
     ),
     array(
-        'icon' => 'glyphicon-tree-deciduous',
+        'icon' => 'fa-tree',
         'caption' => 'Классы',
         'controller' => 'coreclass',
         'content' => ['get_class'],
     ),
     array(
-        'icon' => 'glyphicon-folder-open',
+        'icon' => 'fa-folder-open',
         'caption' => 'Каталоги',
         'controller' => 'corecat',
         'content' => ['getcwd', 'scandir'],
     ),
     array(
-        'icon' => 'glyphicon-file',
+        'icon' => 'fa-file',
         'caption' => 'Файлы',
         'controller' => 'corefile',
         'content' => ['realpath', 'dirname'],
     ),
     array(
-        'icon' => 'glyphicon-flash',
+        'icon' => 'fa-terminal',
         'caption' => 'Запуск программы',
         'controller' => 'coreshell',
         'content' => ['shell_exec'],
     ),
     array(
-        'icon' => 'glyphicon-inbox',
+        'icon' => 'fa-quote-right',
         'caption' => 'Строки',
         'controller' => 'corestring',
         'content' => ['explode', 'strpos', 'htmlspecialchars'],

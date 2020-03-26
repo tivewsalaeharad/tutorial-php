@@ -6,80 +6,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="/public/css/style.css">
     <title>Заголовок страницы</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="/public/js/script.js"></script>
 </head>
 
 <body>
 
-<div class="row affix-row">
-    <div class="col-sm-3 col-md-2 affix-sidebar">
-        <div class="sidebar-nav">
-            <div class="navbar navbar-default" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <span class="visible-xs navbar-brand">Sidebar menu</span>
-                </div>
-                <div class="navbar-collapse collapse sidebar-navbar-collapse" style="overflow: auto;">
-                <ul class="nav navbar-nav" id="sidenav01">
-                    <li class="active">
-                        <a href="#" data-toggle="collapse" data-target="#toggleDemoProfile" data-parent="#sidenav01" class="collapsed">
-                            <h4>
-                                Control Panel
-                                <br>
-                                <small>IOSDSV <span class="caret"></span></small>
-                            </h4>
-                        </a>
-                        <div class="collapse" id="toggleDemoProfile" style="height: 0px;">
-                            <ul class="nav nav-list">
-                                <li><a href="#">ProfileSubMenu1</a></li>
-                                <li><a href="#">ProfileSubMenu2</a></li>
-                                <li><a href="#">ProfileSubMenu3</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <? foreach ($items as $index => $item) : ?>
-                    <li>
-                        <a href="#" data-toggle="collapse" data-target="#toggleDemo<?=$index?>" data-parent="#sidenav01" class="collapsed">
-                            <span class="glyphicon <?=$item['icon']?>"></span> <?=$item['caption']?> <span class="caret pull-right"></span>
-                        </a>
-                        <div class="collapse" id="toggleDemo<?=$index?>" style="height: 0px;">
-                            <ul class="nav nav-list">
-                                <? foreach($item['content'] as $element) : ?>
-                                <li><a href="<?="/{$item['controller']}/$element"?>"><?=$element?></a></li>
-                                <? endforeach; ?>
-                            </ul>
-                        </div>
-                    </li>
-                    <? endforeach; ?>
-                    <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Normalmenu</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> WithBadges <span class="badge pull-right">42</span></a></li>
-                    <li><a href=""><span class="glyphicon glyphicon-cog"></span> PreferencesMenu</a></li>
+<div id="throbber" style="display:none; min-height:120px;"></div>
+<div id="noty-holder"></div>
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://cijulenlinea.ucr.ac.cr/dev-users/">
+                <img src="http://placehold.it/200x50&text=LOGO" alt="LOGO">
+            </a>
+        </div>
+        <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+            <li><a href="#" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
+                </a>
+            </li>            
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Admin User <b class="fa fa-angle-down"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile </a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password </a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout </a></li>
                 </ul>
-            </div><!--/.nav-collapse -->
+            </li>
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <? foreach ($items as $index => $item) : ?>
+                <li>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-<?=$index?>"><i class="fa fa-fw <?=$item['icon']?>"></i> <?=$item['caption']?> <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <ul id="submenu-<?=$index?>" class="collapse">
+                        <? foreach($item['content'] as $element) : ?>
+                        <li><a href="<?="/{$item['controller']}/$element"?>"><i class="fa fa-angle-double-right"></i> <?=$element?> </a></li>
+                        <? endforeach; ?>
+                    </ul>
+                </li>
+                <? endforeach; ?>
+            </ul>
         </div>
-    </div>
-</div>
+        <!-- /.navbar-collapse -->
+    </nav>
 
-<div class="col-sm-9 col-md-10 affix-content">
-    <div class="container">
-        <div class="page-header">
-            <h3><span class="glyphicon glyphicon-th-list"></span> Navigation</h3>
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                <div class="col-sm-12 col-md-12 well" id="content">
+                    <?=$body?>
+                </div>
+            </div>
+            <!-- /.row -->
         </div>
-        <div class="col pt-2">
-            <?=$body?>
-        </div>
+        <!-- /.container-fluid -->
     </div>
-</div>
-
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <!-- /#page-wrapper -->
+</div><!-- /#wrapper -->
 
 </body>
 
