@@ -17,14 +17,17 @@ class App
 
         if (file_exists('../app/controllers/'.$this->controller.'.php')) {
             require_once('../app/controllers/'.$this->controller.'.php');
-            $this->controller = new $this->controller;
-            echo call_user_func_array([$this->controller, $this->method], $this->params);
+            $this->controller = new $this->controller($this->controller);
         } else {
+            /*
             $unknownPage = $this->controller;
             require_once('../app/controllers/error.php');
             $this->controller = new ErrorController;
             echo $this->controller->unknownPage($unknownPage);
+             */
+            $this->controller = new Controller($this->controller);
         }
+        echo call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
     public function parseUrl()

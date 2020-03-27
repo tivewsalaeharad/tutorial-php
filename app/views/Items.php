@@ -12,6 +12,18 @@
         'content' => ['get_class'],
     ),
     array(
+        'icon' => 'fa-cog',
+        'caption' => 'Информация PHP',
+        'controller' => 'corephp',
+        'content' => ['phpinfo'],
+    ),
+    array(
+        'icon' => 'fa-retweet',
+        'caption' => 'Reflection',
+        'controller' => 'corereflection',
+        'content' => ['Reflection'],
+    ),
+    array(
         'icon' => 'fa-folder-open',
         'caption' => 'Каталоги',
         'controller' => 'corecat',
