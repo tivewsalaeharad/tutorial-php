@@ -9,8 +9,8 @@ class DefaultController extends Controller
     }
 
     public function __call(string $name , array $arguments) {
-        if (file_exists('..\\app\\views\\'.$this->folder.'\\'.$name.'.php')) {
-            return $this->view($this->folder.'\\'.$name);
+        if (file_exists('../app/views/'.$this->folder.'/'.$name.'.php')) {
+            return $this->view($this->folder.'/'.$name);
         } else {
             return $this->unknownMethod($name);
         }
