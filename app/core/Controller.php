@@ -16,7 +16,7 @@ class Controller
     }
 
     public function unknownMethod($method) {
-        return $this->view('error/unknownMethod', ['method' => $method]);
+        return $this->view('error/unknownMethod', ['method' => $method, 'class' => get_class($this)]);
     }
 
     public function __call(string $name , array $arguments) {

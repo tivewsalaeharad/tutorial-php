@@ -1,1 +1,1 @@
-<? echo "Метод {$data['method']} не найден";
+<? echo "Метод {$data['method']} класса {$data['class']} не найден";
