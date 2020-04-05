@@ -2,8 +2,8 @@
 
 class Routine extends Controller {
 
-    private $file_upload_txt = '..\\app\\files\\file.txt';
-    private $file_write_file = '..\\app\\files\\write.txt';
+    private $file_upload_txt = '../app/files/file.txt';
+    private $file_write_file = '../app/files/write.txt';
  
     public function upload_txt() {
         header('Content-Description: File Transfer');

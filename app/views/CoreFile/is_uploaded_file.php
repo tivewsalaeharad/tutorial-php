@@ -4,7 +4,7 @@ if (isset($_POST['upload'])) {
     $tmp_name = $_FILES['uploadfile']['tmp_name'];
     if (is_uploaded_file($tmp_name)) {
         $brief_name = $_FILES['uploadfile']['name'];
-        $file_name = "..\\app\\files\\$brief_name";
+        $file_name = "../app/files/$brief_name";
         echo "Файл $brief_name успешно загружен.&lt;br&gt;Отображаем содержимое&lt;br&gt;&lt;br&gt;";
         move_uploaded_file($tmp_name, $file_name);
         readfile($file_name);
@@ -21,7 +21,7 @@ if (isset($_POST['upload'])) {
     $tmp_name = $_FILES['uploadfile']['tmp_name'];
     if (is_uploaded_file($tmp_name)) {
         $brief_name = $_FILES['uploadfile']['name'];
-        $file_name = "..\\app\\files\\$brief_name";
+        $file_name = "../app/files/$brief_name";
         echo "Файл $brief_name успешно загружен.<br>Отображаем содержимое<br><br>";
         move_uploaded_file($tmp_name, $file_name);
         readfile($file_name);

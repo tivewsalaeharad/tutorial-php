@@ -1,8 +1,8 @@
 <h1>Пример с выводом файла:</h1>
 <pre>
-readfile('..\\app\\files\\file.txt');
+readfile('../app/files/file.txt');
 </pre>
-<p><?readfile('..\\app\\files\\file.txt');?></p>
+<p><?readfile('../app/files/file.txt');?></p>
 <h1>Пример с загрузкой файла:</h1>
 <p>На отдельной странице:</p>
 <pre>

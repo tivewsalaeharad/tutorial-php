@@ -1,16 +1,16 @@
 <?
 if (isset($_POST['unlink'])) {
-    unlink('..\\app\\files\\'.$_POST['filename']);
+    unlink('../app/files/'.$_POST['filename']);
 }
-$files = array_slice(scandir('..\\app\\files'), 2);
+$files = array_slice(scandir('../app/files'), 2);
 ?>
 
 <pre>
 
 if (isset($_POST['unlink'])) {
-    unlink('..\\app\\files\\'.$_POST['filename']);
+    unlink('../app/files/'.$_POST['filename']);
 }
-$files = array_slice(scandir('..\\app\\files'), 2);
+$files = array_slice(scandir('../app/files'), 2);
 
 
 </pre>

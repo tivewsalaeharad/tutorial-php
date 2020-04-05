@@ -1,6 +1,6 @@
 <pre>
 
-$filename = "..\\app\\files\\write.txt";
+$filename = "../app/files/write.txt";
 if (!$handle = fopen($filename, "rb")) {
     echo "Не удаётся открыть файл";
 } else {
@@ -10,7 +10,7 @@ if (!$handle = fopen($filename, "rb")) {
 }
 
 <?
-$filename = "..\\app\\files\\write.txt";
+$filename = "../app/files/write.txt";
 if (!$handle = fopen($filename, "rb")) {
     echo "Не удаётся открыть файл";
 } else {
