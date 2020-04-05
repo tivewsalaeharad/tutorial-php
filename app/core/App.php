@@ -19,7 +19,8 @@ class App
             require_once('../app/controllers/'.$this->controller.'.php');
             $this->controller = new $this->controller($this->controller);
         } else {
-            $this->controller = new Controller($this->controller);
+            require_once('../app/controllers/default.php');
+            $this->controller = new DefaultController($this->controller);
         }
         echo call_user_func_array([$this->controller, $this->method], $this->params);
     }
@@ -35,7 +36,7 @@ class App
 
     public static function handleException (Throwable $e) {
         require_once('../app/controllers/error.php');
-        $controller = new ErrorController('');
+        $controller = new ErrorController();
         echo $controller->error500($e);
     }
 }
