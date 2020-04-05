@@ -14,7 +14,7 @@
         'icon' => 'fa-code',
         'caption' => 'Массивы',
         'controller' => 'CoreArray',
-        'content' => ['array_chunk', 'array_count_values', 'array_flip', 'array_keys', 'array_pop', 'array_push', 'array_reverse', 'array_shift', 'array_slice', 'array_sum', 'array_unique', 'array_unshift', 'arsort', 'asort', 'extract', 'ksort', 'natsort', 'rsort', 'shuffle', 'sort'],
+        'content' => ['array_chunk', 'array_count_values', 'array_flip', 'array_keys', 'array_map', 'array_pop', 'array_push', 'array_reverse', 'array_shift', 'array_slice', 'array_sum', 'array_unique', 'array_unshift', 'array_walk', 'arsort', 'asort', 'extract', 'ksort', 'natsort', 'rsort', 'shuffle', 'sort'],
     ),
     array(
         'icon' => 'fa-tree',
