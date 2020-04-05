@@ -12,7 +12,7 @@ class DefaultController extends Controller
         if (file_exists('../app/views/'.$this->folder.'/'.$name.'.php')) {
             return $this->view($this->folder.'/'.$name);
         } else {
-            return $this->unknownMethod($name);
+            return $this->unknownMethod($name.' [../app/views/'.$this->folder.'/'.$name.'.php]');
         }
     }
 
