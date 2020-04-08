@@ -1,10 +1,2 @@
-Name: Павел
-Message: Привет всем!
 Name: Pavel Sumarokov
-Message: И снова здравствуйте!!!
-Name: Павел
 Message: Hello world!!!
-Name: Павел
-Message: Добрый вечер!!!
-Name: Павел
-Message: Привет всем!
