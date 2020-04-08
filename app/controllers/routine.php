@@ -26,7 +26,7 @@ class Routine extends Controller {
             echo "Не могу произвести запись в файл ($this->file_write_file)";
             exit;
         }
-        header('Location: /corefile/fread');
+        header('Location: /CoreFile/fread');
     }
 
 }

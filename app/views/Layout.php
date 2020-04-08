@@ -28,7 +28,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <img src="../public/images/PHP-logo.svg" alt="LOGO">
+                <img src="../public/images/new-php-logo.svg" alt="LOGO" width="12%" height="auto">
             </a>
         </div>
         <!-- Top Menu Items -->
