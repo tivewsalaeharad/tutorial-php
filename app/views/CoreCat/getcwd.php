@@ -1,5 +1,1 @@
-<pre>
-getcwd() = 
-
 <?=getcwd()?>
-</pre>

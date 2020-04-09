@@ -65,22 +65,14 @@
     </nav>
 
     <div id="page-wrapper">
-        <div class="container-fluid">
-            <!-- Page Heading -->
-            <div class="row" id="main" >
-                <div class="col-sm-12 col-md-12 well" id="content">
-                    <?=$body?>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container-fluid -->
+        <pre class='prettyprint' style="padding: 10px;"><?=htmlspecialchars(file_get_contents('../app/views/'.$view.'.php'))?></pre>
+        <div><?=$body?></div>
     </div>
-    <!-- /#page-wrapper -->
-</div><!-- /#wrapper -->
+</div>
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 <script src="/public/js/script.js"></script>
 
 </body>

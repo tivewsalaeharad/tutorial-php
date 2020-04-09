@@ -12,7 +12,7 @@ class Controller
         require_once('../app/views/'.$view.'.php');
         $body = ob_get_clean();
         ob_end_clean();
-        return $this->layout($body);
+        return $this->layout($body, $view);
     }
 
     public function unknownMethod($method) {
@@ -23,7 +23,7 @@ class Controller
         return $this->unknownMethod($name);
     }
 
-    private function layout($body) {
+    private function layout($body, $view) {
         ob_start();
         require('../app/views/Layout.php');
         $return = ob_get_clean();
