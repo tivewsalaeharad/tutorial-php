@@ -14,7 +14,7 @@
         'icon' => 'fa-code',
         'caption' => 'Массивы',
         'controller' => 'CoreArray',
-        'content' => ['array_chunk', 'array_count_values', 'array_flip', 'array_keys', 'array_map', 'array_pop', 'array_push', 'array_reverse', 'array_shift', 'array_slice', 'array_sum', 'array_unique', 'array_unshift', 'array_walk', 'arsort', 'asort', 'extract', 'ksort', 'natsort', 'rsort', 'shuffle', 'sort'],
+        'content' => ['array_chunk', 'array_count_values', 'array_flip', 'array_keys', 'array_map', 'array_pop', 'array_push', 'array_reverse', 'array_shift', 'array_slice', 'array_sum', 'array_unique', 'array_unshift', 'array_walk', 'array_walk_recursive', 'arsort', 'asort', 'extract', 'ksort', 'natsort', 'rsort', 'shuffle', 'sort'],
     ),
     array(
         'icon' => 'fa-tree',
@@ -80,6 +80,18 @@
         'icon' => 'fa-quote-right',
         'caption' => 'Строки',
         'controller' => 'CoreString',
-        'content' => ['explode', 'htmlentities', 'htmlspecialchars', 'implode', 'md5', 'printf', 'sprintf', 'str_ireplace', 'str_split', 'strlen', 'strpos', 'str_repeat', 'str_replace', 'strrev', 'trim'],
+        'content' => ['explode', 'htmlentities', 'htmlspecialchars', 'implode', 'md5', 'printf', 'sprintf', 'str_ireplace', 'str_split', 'strlen', 'strpos', 'str_repeat', 'str_replace', 'strrev', 'strtr', 'trim'],
+    ),
+    array(
+        'icon' => 'fa-image',
+        'caption' => 'Изображения',
+        'controller' => 'BundledImages',
+        'content' => ['imagepng'],
+    ),
+    array(
+        'icon' => 'fa-quote-left',
+        'caption' => 'Многобайтовые строки',
+        'controller' => 'BundledMultibyte',
+        'content' => ['mb_substr'],
     ),
 ); ?>
