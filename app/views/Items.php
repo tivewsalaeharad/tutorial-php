@@ -11,6 +11,12 @@
     unset()
     */
     array(
+        'icon' => 'fa-indent',
+        'caption' => 'Встроенные классы',
+        'controller' => 'InbuiltClasses',
+        'content' => ['Generator'],
+    ),
+    array(
         'icon' => 'fa-code',
         'caption' => 'Массивы',
         'controller' => 'CoreArray',
@@ -56,7 +62,7 @@
         'icon' => 'fa-file',
         'caption' => 'Файлы',
         'controller' => 'CoreFile',
-        'content' => ['dirname', 'file_exists', 'filesize', 'filetype', 'fopen', 'fread', 'fwrite', 'is_executable', 'is_file', 'is_readable', 'is_uploaded_file', 'is_writable', 'mkdir', 'move_uploaded_file', 'pathinfo', 'readfile', 'realpath', 'rename', 'unlink'],
+        'content' => ['dirname', 'file_exists', 'file_get_contents', 'filesize', 'filetype', 'fopen', 'fread', 'fwrite', 'is_executable', 'is_file', 'is_readable', 'is_uploaded_file', 'is_writable', 'mkdir', 'move_uploaded_file', 'pathinfo', 'readfile', 'realpath', 'rename', 'unlink'],
     ),
     array(
         'icon' => 'fa-calculator',
@@ -87,6 +93,12 @@
         'caption' => 'Изображения',
         'controller' => 'BundledImages',
         'content' => ['imagepng'],
+    ),
+    array(
+        'icon' => 'fa-align-left',
+        'caption' => 'PCRE',
+        'controller' => 'BundledPCRE',
+        'content' => ['preg_match', 'preg_match_all'],
     ),
     array(
         'icon' => 'fa-quote-left',
