@@ -32,7 +32,7 @@
         'icon' => 'fa-calendar',
         'caption' => 'Дата и время',
         'controller' => 'CoreDateTime',
-        'content' => ['date_sunrise', 'date_sunset', 'strftime'],
+        'content' => ['date_sunrise', 'date_sunset', 'date', 'strftime'],
     ),
     array(
         'icon' => 'fa-retweet',
@@ -62,7 +62,7 @@
         'icon' => 'fa-file',
         'caption' => 'Файлы',
         'controller' => 'CoreFile',
-        'content' => ['dirname', 'file_exists', 'file_get_contents', 'filesize', 'filetype', 'fopen', 'fread', 'fwrite', 'is_executable', 'is_file', 'is_readable', 'is_uploaded_file', 'is_writable', 'mkdir', 'move_uploaded_file', 'pathinfo', 'readfile', 'realpath', 'rename', 'unlink'],
+        'content' => ['dirname', 'file_exists', 'file_get_contents', 'file', 'filesize', 'filetype', 'fopen', 'fread', 'fwrite', 'glob', 'is_executable', 'is_file', 'is_readable', 'is_uploaded_file', 'is_writable', 'mkdir', 'move_uploaded_file', 'pathinfo', 'readfile', 'realpath', 'rename', 'unlink'],
     ),
     array(
         'icon' => 'fa-calculator',
@@ -86,13 +86,13 @@
         'icon' => 'fa-quote-right',
         'caption' => 'Строки',
         'controller' => 'CoreString',
-        'content' => ['explode', 'htmlentities', 'htmlspecialchars', 'implode', 'md5', 'printf', 'sprintf', 'str_ireplace', 'str_split', 'strlen', 'strpos', 'str_repeat', 'str_replace', 'strrev', 'strtr', 'trim'],
+        'content' => ['explode', 'htmlentities', 'htmlspecialchars', 'implode', 'md5', 'printf', 'sprintf', 'str_ireplace', 'str_split', 'strlen', 'strpos', 'str_repeat', 'str_replace', 'strrev', 'strtr', 'substr_count', 'trim'],
     ),
     array(
-        'icon' => 'fa-image',
-        'caption' => 'Изображения',
-        'controller' => 'BundledImages',
-        'content' => ['imagepng'],
+        'icon' => 'fa-code',
+        'caption' => 'JSON',
+        'controller' => 'BundledJSON',
+        'content' => ['json_decode', 'json_encode'],
     ),
     array(
         'icon' => 'fa-align-left',
@@ -101,9 +101,27 @@
         'content' => ['preg_match', 'preg_match_all'],
     ),
     array(
+        'icon' => 'fa-image',
+        'caption' => 'Изображения',
+        'controller' => 'BundledImages',
+        'content' => ['imagepng'],
+    ),
+    array(
         'icon' => 'fa-quote-left',
         'caption' => 'Многобайтовые строки',
         'controller' => 'BundledMultibyte',
-        'content' => ['mb_substr'],
+        'content' => ['mb_strimwidth', 'mb_substr'],
+    ),
+    array(
+        'icon' => 'fa-server',
+        'caption' => 'cURL',
+        'controller' => 'ExternalCURL',
+        'content' => ['curl_exec'],
+    ),
+    array(
+        'icon' => 'fa-database',
+        'caption' => 'MySQLi',
+        'controller' => 'ExternalMySQLi',
+        'content' => ['mysqli_connect'],
     ),
 ); ?>
