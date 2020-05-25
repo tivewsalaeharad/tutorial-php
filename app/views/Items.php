@@ -49,7 +49,7 @@
     array(
         'icon' => 'fa-cog',
         'caption' => 'Информация PHP',
-        'controller' => 'CorePHP',
+        'controller' => 'CoreInfo',
         'content' => ['extension_loaded', 'phpinfo', 'version_compare'],
     ),
     array(
