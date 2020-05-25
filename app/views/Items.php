@@ -50,7 +50,7 @@
         'icon' => 'fa-cog',
         'caption' => 'Информация PHP',
         'controller' => 'CorePHP',
-        'content' => ['phpinfo', 'version_compare'],
+        'content' => ['extension_loaded', 'phpinfo', 'version_compare'],
     ),
     array(
         'icon' => 'fa-folder-open',
@@ -87,6 +87,12 @@
         'caption' => 'Строки',
         'controller' => 'CoreString',
         'content' => ['explode', 'htmlentities', 'htmlspecialchars', 'implode', 'md5', 'printf', 'sprintf', 'str_ireplace', 'str_split', 'strlen', 'strpos', 'str_repeat', 'str_replace', 'strrev', 'strtr', 'substr_count', 'trim'],
+    ),
+    array(
+        'icon' => 'fa-calculator',
+        'caption' => 'BC Math',
+        'controller' => 'BundledBCMath',
+        'content' => ['bcmul', 'bcsqrt'],
     ),
     array(
         'icon' => 'fa-code',
