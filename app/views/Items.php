@@ -29,16 +29,16 @@
         'content' => ['get_class'],
     ),
     array(
-        'icon' => 'fa-calendar',
-        'caption' => 'Дата и время',
-        'controller' => 'CoreDateTime',
-        'content' => ['date_sunrise', 'date_sunset', 'date', 'strftime'],
-    ),
-    array(
         'icon' => 'fa-retweet',
         'caption' => 'Reflection',
         'controller' => 'CoreReflection',
         'content' => ['Reflection'],
+    ),
+    array(
+        'icon' => 'fa-calendar',
+        'caption' => 'Дата и время',
+        'controller' => 'CoreDateTime',
+        'content' => ['date_sunrise', 'date_sunset', 'date', 'strftime'],
     ),
     array(
         'icon' => 'fa-bug',

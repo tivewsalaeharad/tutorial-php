@@ -1,1 +1,3 @@
 <?=get_class($this)?>
+<?
+

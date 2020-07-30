@@ -1,6 +1,8 @@
 <?php
 class Controller
 {
+    public $testVar; 
+
     public function model($model) {
         require_once('../app/models/'.$model.'.php');
         return new $model();
@@ -13,6 +15,10 @@ class Controller
         $body = ob_get_clean();
         ob_end_clean();
         return $this->layout($body, $view);
+    }
+
+    public function testParent() {
+        echo "Testing parent class with given number: $this->testVar<br>";
     }
 
     public function unknownMethod($method) {
