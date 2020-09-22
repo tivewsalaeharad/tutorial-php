@@ -1,19 +1,4 @@
 <pre>
-$s = new SplObjectStorage();
-$o1 = new StdClass;
-$o2 = new StdClass;
-$o3 = new StdClass;
-$s-&gt;attach($o1);
-$s-&gt;attach($o2);
-var_dump($s-&gt;contains($o1));
-var_dump($s-&gt;contains($o2));
-var_dump($s-&gt;contains($o3));
-$s-&gt;detach($o2);
-var_dump($s-&gt;contains($o1));
-var_dump($s-&gt;contains($o2));
-var_dump($s-&gt;contains($o3));
-
-
 <?php
 $s = new SplObjectStorage();
 $o1 = new StdClass;

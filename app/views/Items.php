@@ -130,5 +130,11 @@
         'controller' => 'ExternalMySQLi',
         'content' => ['mysqli_connect'],
     ),
+    array(
+        'icon' => 'fa-file',
+        'caption' => 'PDF',
+        'controller' => 'PECL_PDF',
+        'content' => ['PDFlib'],
+    )
 );
 

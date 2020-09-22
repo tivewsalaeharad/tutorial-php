@@ -1,2 +1,6 @@
 Name: Pavel Sumarokov
 Message: Hello world!!!
+Name: Pavel Sumarokov
+Message: Вынос метода
+Name: Pavel Sumarokov
+Message: Прошёл успешно

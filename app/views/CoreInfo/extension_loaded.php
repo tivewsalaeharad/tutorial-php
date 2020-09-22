@@ -7,4 +7,5 @@ echo "Подключён curl: ".(extension_loaded('curl') ? 'да' : 'нет').
 echo "Подключён mysqli: ".(extension_loaded('mysqli') ? 'да' : 'нет').'<br>';
 echo "Подключён ssh2: ".(extension_loaded('ssh2') ? 'да' : 'нет').'<br>';
 echo "Подключён stats: ".(extension_loaded('stats') ? 'да' : 'нет').'<br>';
+echo "Подключён pdflib: ".(extension_loaded('pdflib') ? 'да' : 'нет').'<br>';
 

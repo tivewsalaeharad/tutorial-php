@@ -4,16 +4,6 @@ if (isset($_POST['unlink'])) {
 }
 $files = array_slice(scandir('../app/files'), 2);
 ?>
-
-<pre>
-
-if (isset($_POST['unlink'])) {
-    unlink('../app/files/'.$_POST['filename']);
-}
-$files = array_slice(scandir('../app/files'), 2);
-
-
-</pre>
 <table>
     <?foreach ($files as $file):?>
         <tr>
