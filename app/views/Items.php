@@ -80,7 +80,7 @@
         'icon' => 'fa-list',
         'caption' => 'Standard PHP Library',
         'controller' => 'CoreSPL',
-        'content' => ['spldoublylinkedlist', 'splstack', 'splqueue', 'splmaxheap', 'splminheap', 'splpriorityqueue', 'splfixedarray', 'splobjectstorage', 'arrayobject'],
+        'content' => ['SplDoublyLinkedList', 'SplStack', 'SplQueue', 'SplMaxHeap', 'SplMinHeap', 'SplPriorityQueue', 'SplFixedArray', 'SplObjectStorage', 'ArrayObject', 'spl_autoload_register'],
     ),
     array(
         'icon' => 'fa-quote-right',
