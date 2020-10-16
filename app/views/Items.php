@@ -23,6 +23,12 @@
         'content' => ['array_chunk', 'array_column', 'array_count_values', 'array_filter', 'array_flip', 'array_keys', 'array_map', 'array_pop', 'array_push', 'array_reverse', 'array_shift', 'array_slice', 'array_sum', 'array_unique', 'array_unshift', 'array_walk', 'array_walk_recursive', 'arsort', 'asort', 'extract', 'ksort', 'natsort', 'rsort', 'shuffle', 'sort'],
     ),
     array(
+        'icon' => 'fa-filter',
+        'caption' => 'Фильтрация данных',
+        'controller' => 'CoreFilter',
+        'content' => ['filter_id', 'filter_list', 'filter_var'],
+    ),
+    array(
         'icon' => 'fa-tree',
         'caption' => 'Классы',
         'controller' => 'CoreClass',
