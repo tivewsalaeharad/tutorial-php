@@ -15,8 +15,14 @@ class Routine extends Controller {
         require_once('../app/functions/write_file.php');
     }
 
-    public function generate_pdf() {
+    public function generate_pdf()
+    {
         require_once('../app/functions/generate_pdf.php');
+    }
+
+    public function filters()
+    {
+        require_once('../app/functions/filters.php');
     }
 
 }

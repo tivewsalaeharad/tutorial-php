@@ -26,19 +26,19 @@
         'icon' => 'fa-filter',
         'caption' => 'Фильтрация данных',
         'controller' => 'CoreFilter',
-        'content' => ['filter_id', 'filter_list', 'filter_var'],
+        'content' => ['filter_has_var', 'filter_id', 'filter_input', 'filter_list', 'filter_var', 'filter_var_array'],
     ),
     array(
         'icon' => 'fa-tree',
         'caption' => 'Классы',
         'controller' => 'CoreClass',
-        'content' => ['get_class'],
+        'content' => ['get_class', 'get_class_vars'],
     ),
     array(
         'icon' => 'fa-retweet',
         'caption' => 'Reflection',
         'controller' => 'CoreReflection',
-        'content' => ['Reflection'],
+        'content' => ['Reflection', 'ReflectionClass', 'ReflectionExtension', 'ReflectionFunction', 'ReflectionMethod', 'ReflectionParameter'],
     ),
     array(
         'icon' => 'fa-calendar',
