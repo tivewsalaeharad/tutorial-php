@@ -1,15 +1,23 @@
 <?php
-function someFunction(int $param, $param2) {}
+function someFunction(int $param, string $param2, callable &$param3, $param4, Exception &$param5) {}
 
-$rf = new ReflectionFunction('someFunction');
-$rp = $rf->getParameters();
+$rp = (new ReflectionFunction('someFunction'))->getParameters();
+$rmp = (new ReflectionMethod('ReflectionClass', 'getConstant'))->getParameters();
+
 echo "<pre>";
-var_dump($rp);
-echo PHP_EOL;
 
 foreach ($rp as $rpe) {
     $rt = $rpe->getType();
-    echo ($rt ? $rt : '-').PHP_EOL;
+    echo $rpe->getName().': '.
+        ($rt ? $rt->getName().($rt->isBuiltin() ? '@' : '').' ' : 'NOTYPE ').
+        ($rpe->canBePassedByValue() ? 'BYVAL ' : '').
+        ($rpe->isPassedByReference() ? 'BYREF ' : '').PHP_EOL;
+}
+
+echo "</pre><pre>";
+
+foreach ($rmp as $item) {
+    var_dump($item->getDeclaringFunction());
 }
 
 echo "</pre>";

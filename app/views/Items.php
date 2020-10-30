@@ -38,7 +38,7 @@
         'icon' => 'fa-retweet',
         'caption' => 'Reflection',
         'controller' => 'CoreReflection',
-        'content' => ['Reflection', 'ReflectionClass', 'ReflectionExtension', 'ReflectionFunction', 'ReflectionMethod', 'ReflectionParameter'],
+        'content' => ['Reflection', 'ReflectionClass', 'ReflectionExtension', 'ReflectionFunction', 'ReflectionMethod', 'ReflectionParameter', 'ReflectionGenerator', 'ReflectionReference'],
     ),
     array(
         'icon' => 'fa-calendar',
