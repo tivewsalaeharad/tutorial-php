@@ -41,6 +41,12 @@
         'content' => ['Reflection', 'ReflectionClass', 'ReflectionExtension', 'ReflectionFunction', 'ReflectionMethod', 'ReflectionParameter', 'ReflectionGenerator', 'ReflectionReference'],
     ),
     array(
+        'icon' => 'fa-font',
+        'caption' => 'Переменные',
+        'controller' => 'CoreVar',
+        'content' => ['boolval', 'debug_zval_dump', 'get_defined_vars', 'serialize'],
+    ),
+    array(
         'icon' => 'fa-calendar',
         'caption' => 'Дата и время',
         'controller' => 'CoreDateTime',
