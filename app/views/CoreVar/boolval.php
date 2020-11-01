@@ -49,7 +49,7 @@
         <td>isset($x)</td>
         <td>$x !== null</td>
     </tr>
-    <?php foreach ($array as $text => $element) {
+    <?php foreach ($array as $text => $element) :
         $is_countable = is_countable($element) ? 'true' : 'false';
         $is_iterable = is_iterable($element) ? 'true' : 'false';
         $is_scalar = is_scalar($element) ? 'true' : 'false';
@@ -87,5 +87,5 @@
         <td class="<?=$isset?>"><?=$isset?></td>
         <td class="<?=$strictly_not_null?>"><?=$strictly_not_null?></td>
     </tr>
-    <?php }?>
+    <?php endforeach; ?>
 </table>

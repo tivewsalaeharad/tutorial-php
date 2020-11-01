@@ -3,12 +3,9 @@
     __halt_compiler()
     array()
     die()
-    empty()
     eval()
     exit()
-    isset()
     list()
-    unset()
     */
     array(
         'icon' => 'fa-indent',
@@ -44,7 +41,25 @@
         'icon' => 'fa-font',
         'caption' => 'Переменные',
         'controller' => 'CoreVar',
-        'content' => ['boolval', 'debug_zval_dump', 'get_defined_vars', 'serialize'],
+        'content' => ['boolval', 'debug_zval_dump', 'empty', 'get_defined_vars', 'isset', 'serialize', 'unset'],
+    ),
+    array(
+        'icon' => 'fa-subscript',
+        'caption' => 'CSPRING',
+        'controller' => 'CoreCSPRING',
+        'content' => ['random_bytes', 'random_int'],
+    ),
+    array(
+        'icon' => 'fa-ellipsis-h',
+        'caption' => 'Hash',
+        'controller' => 'CoreHash',
+        'content' => ['hash_algos', 'hash_hmac_algos', 'hash'],
+    ),
+    array(
+        'icon' => 'fa-asterisk',
+        'caption' => 'Пароли',
+        'controller' => 'CorePassword',
+        'content' => ['password_algos', 'password_hash', 'password_get_info'],
     ),
     array(
         'icon' => 'fa-calendar',
@@ -98,7 +113,7 @@
         'icon' => 'fa-quote-right',
         'caption' => 'Строки',
         'controller' => 'CoreString',
-        'content' => ['explode', 'htmlentities', 'htmlspecialchars', 'implode', 'md5', 'printf', 'sprintf', 'str_ireplace', 'str_split', 'strlen', 'strpos', 'str_repeat', 'str_replace', 'strrev', 'strtr', 'substr_count', 'trim'],
+        'content' => ['explode', 'htmlentities', 'htmlspecialchars', 'implode', 'md5', 'printf', 'quoted_printable_encode', 'sprintf', 'str_ireplace', 'str_split', 'strlen', 'strpos', 'str_repeat', 'str_replace', 'strrev', 'strtr', 'substr_count', 'trim'],
     ),
     array(
         'icon' => 'fa-calculator',
