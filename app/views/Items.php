@@ -6,7 +6,6 @@
     eval()
     exit()
     list()
-    */
     array(
         'icon' => 'fa-indent',
         'caption' => 'Встроенные классы',
@@ -37,11 +36,12 @@
         'controller' => 'CoreReflection',
         'content' => ['Reflection', 'ReflectionClass', 'ReflectionExtension', 'ReflectionFunction', 'ReflectionMethod', 'ReflectionParameter', 'ReflectionGenerator', 'ReflectionReference'],
     ),
+    */
     array(
         'icon' => 'fa-font',
         'caption' => 'Переменные',
         'controller' => 'CoreVar',
-        'content' => ['boolval', 'debug_zval_dump', 'empty', 'get_defined_vars', 'isset', 'serialize', 'unset'],
+        'content' => ['boolval', 'debug_zval_dump', 'empty', 'get_defined_vars', 'isset', 'serialize', 'unset', 'var_export'],
     ),
     array(
         'icon' => 'fa-subscript',
@@ -65,7 +65,7 @@
         'icon' => 'fa-calendar',
         'caption' => 'Дата и время',
         'controller' => 'CoreDateTime',
-        'content' => ['date_sunrise', 'date_sunset', 'date', 'strftime', 'strtotime'],
+        'content' => ['DateTimeImmutable', 'date_sunrise', 'date_sunset', 'date', 'strftime', 'strtotime'],
     ),
     array(
         'icon' => 'fa-bug',
