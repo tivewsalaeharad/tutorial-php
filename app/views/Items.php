@@ -36,7 +36,6 @@
         'controller' => 'CoreReflection',
         'content' => ['Reflection', 'ReflectionClass', 'ReflectionExtension', 'ReflectionFunction', 'ReflectionMethod', 'ReflectionParameter', 'ReflectionGenerator', 'ReflectionReference'],
     ),
-    */
     array(
         'icon' => 'fa-font',
         'caption' => 'Переменные',
@@ -67,11 +66,12 @@
         'controller' => 'CoreDateTime',
         'content' => ['DateTimeImmutable', 'date_sunrise', 'date_sunset', 'date', 'strftime', 'strtotime'],
     ),
+    */
     array(
         'icon' => 'fa-bug',
         'caption' => 'Обработка ошибок',
         'controller' => 'CoreError',
-        'content' => ['set_exception_handler'],
+        'content' => ['debug_backtrace', 'debug_print_backtrace', 'error_get_last', 'set_exception_handler'],
     ),
     array(
         'icon' => 'fa-cog',

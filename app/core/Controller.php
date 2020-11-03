@@ -14,7 +14,7 @@ class Controller
         require_once('../app/views/'.$view.'.php');
         $body = ob_get_clean();
         ob_end_clean();
-        return $this->layout($body, $view);
+        return $this->layout($body, $view, $data);
     }
 
     public function testParent() {
@@ -29,8 +29,9 @@ class Controller
         return $this->unknownMethod($name);
     }
 
-    private function layout($body, $view) {
+    private function layout($body, $view, $data = []) {
         ob_start();
+        $code = get_called_class() == 'ErrorController' ? $data[2] : '../app/views/'.$view.'.php' ;
         require('../app/views/Layout.php');
         $return = ob_get_clean();
         return $return;

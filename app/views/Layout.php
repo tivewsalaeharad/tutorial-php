@@ -65,7 +65,7 @@
     </nav>
 
     <div id="page-wrapper">
-        <pre class='prettyprint' style="padding: 10px;"><?=htmlspecialchars(file_get_contents('../app/views/'.$view.'.php'))?></pre>
+        <pre class='prettyprint' style="padding: 10px;"><?=htmlspecialchars(file_get_contents($code))?></pre>
         <div><?=$body?></div>
     </div>
 </div>
