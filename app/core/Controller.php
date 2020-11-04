@@ -13,7 +13,6 @@ class Controller
         ob_start();
         require_once('../app/views/'.$view.'.php');
         $body = ob_get_clean();
-        ob_end_clean();
         return $this->layout($body, $view, $data);
     }
 
@@ -30,7 +29,7 @@ class Controller
     }
 
     private function layout($body, $view, $data = []) {
-        ob_start();
+        ob_start("ob_gzhandler");
         $code = get_called_class() == 'ErrorController' ? $data[2] : '../app/views/'.$view.'.php' ;
         require('../app/views/Layout.php');
         $return = ob_get_clean();

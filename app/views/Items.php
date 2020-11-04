@@ -66,12 +66,18 @@
         'controller' => 'CoreDateTime',
         'content' => ['DateTimeImmutable', 'date_sunrise', 'date_sunset', 'date', 'strftime', 'strtotime'],
     ),
-    */
     array(
         'icon' => 'fa-bug',
         'caption' => 'Обработка ошибок',
         'controller' => 'CoreError',
         'content' => ['debug_backtrace', 'debug_print_backtrace', 'error_get_last', 'set_exception_handler'],
+    ),
+    */
+    array(
+        'icon' => 'fa-arrow-right',
+        'caption' => 'Контроль вывода',
+        'controller' => 'CoreOutcontrol',
+        'content' => ['ob_end_flush', 'ob_get_clean', 'ob_get_flush', 'ob_get_length', 'ob_get_status'],
     ),
     array(
         'icon' => 'fa-cog',
@@ -92,16 +98,16 @@
         'content' => ['dirname', 'file_exists', 'file_get_contents', 'file', 'filesize', 'filetype', 'fopen', 'fread', 'fwrite', 'glob', 'is_executable', 'is_file', 'is_readable', 'is_uploaded_file', 'is_writable', 'mkdir', 'move_uploaded_file', 'pathinfo', 'readfile', 'realpath', 'rename', 'unlink'],
     ),
     array(
-        'icon' => 'fa-calculator',
-        'caption' => 'Math',
-        'controller' => 'CoreMath',
-        'content' => ['max', 'rand'],
-    ),
-    array(
         'icon' => 'fa-terminal',
         'caption' => 'Запуск программы',
         'controller' => 'CoreShell',
         'content' => ['shell_exec'],
+    ),
+    array(
+        'icon' => 'fa-calculator',
+        'caption' => 'Math',
+        'controller' => 'CoreMath',
+        'content' => ['max', 'rand'],
     ),
     array(
         'icon' => 'fa-list',
