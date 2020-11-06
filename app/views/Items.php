@@ -72,18 +72,18 @@
         'controller' => 'CoreError',
         'content' => ['debug_backtrace', 'debug_print_backtrace', 'error_get_last', 'set_exception_handler'],
     ),
-    */
     array(
         'icon' => 'fa-arrow-right',
         'caption' => 'Контроль вывода',
         'controller' => 'CoreOutcontrol',
         'content' => ['ob_end_flush', 'ob_get_clean', 'ob_get_flush', 'ob_get_length', 'ob_get_status'],
     ),
+    */
     array(
         'icon' => 'fa-cog',
         'caption' => 'Информация PHP',
         'controller' => 'CoreInfo',
-        'content' => ['extension_loaded', 'phpinfo', 'version_compare'],
+        'content' => ['assert', 'cli_get_process_title', 'extension_loaded', 'gc_enabled', 'gc_status', 'phpinfo', 'version_compare'],
     ),
     array(
         'icon' => 'fa-folder-open',
