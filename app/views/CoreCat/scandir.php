@@ -1,4 +1,4 @@
 <pre>
-<? var_dump(scandir(getcwd())); ?>
-<? var_dump(scandir('..')); ?>
+<? print_r(scandir(getcwd())); ?>
+<? print_r(scandir('..')); ?>
 </pre>

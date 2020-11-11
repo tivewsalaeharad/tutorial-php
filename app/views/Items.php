@@ -78,18 +78,18 @@
         'controller' => 'CoreOutcontrol',
         'content' => ['ob_end_flush', 'ob_get_clean', 'ob_get_flush', 'ob_get_length', 'ob_get_status'],
     ),
-    */
     array(
         'icon' => 'fa-cog',
         'caption' => 'Информация PHP',
         'controller' => 'CoreInfo',
-        'content' => ['assert', 'cli_get_process_title', 'extension_loaded', 'gc_enabled', 'gc_status', 'phpinfo', 'version_compare'],
+        'content' => ['assert', 'cli_get_process_title', 'extension_loaded', 'gc_enabled', 'gc_status', 'get_cfg_var', 'get_resources', 'getrusage', 'phpcredits', 'phpinfo', 'version_compare'],
     ),
+    */
     array(
         'icon' => 'fa-folder-open',
         'caption' => 'Каталоги',
         'controller' => 'CoreCat',
-        'content' => ['getcwd', 'scandir'],
+        'content' => ['Directory', 'getcwd', 'opendir', 'scandir'],
     ),
     array(
         'icon' => 'fa-file',
