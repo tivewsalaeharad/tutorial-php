@@ -1,4 +1,5 @@
 <?php
+echo preg_match('/[a-zA-Zа-яА-Я]/', '+7(495)250-47-89');
 echo "<pre>";
 preg_match('/(foo)(bar)(baz)/', 'foobarbaz', $matches, PREG_OFFSET_CAPTURE);
 print_r($matches);

@@ -76,7 +76,7 @@
         'icon' => 'fa-arrow-right',
         'caption' => 'Контроль вывода',
         'controller' => 'CoreOutcontrol',
-        'content' => ['ob_end_flush', 'ob_get_clean', 'ob_get_flush', 'ob_get_length', 'ob_get_status'],
+        'content' => ['flush', 'ob_end_flush', 'ob_get_clean', 'ob_get_flush', 'ob_get_length', 'ob_get_status', 'ob_implicit_flush'],
     ),
     array(
         'icon' => 'fa-cog',
@@ -84,18 +84,18 @@
         'controller' => 'CoreInfo',
         'content' => ['assert', 'cli_get_process_title', 'extension_loaded', 'gc_enabled', 'gc_status', 'get_cfg_var', 'get_resources', 'getrusage', 'phpcredits', 'phpinfo', 'version_compare'],
     ),
-    */
     array(
         'icon' => 'fa-folder-open',
         'caption' => 'Каталоги',
         'controller' => 'CoreCat',
         'content' => ['Directory', 'getcwd', 'opendir', 'scandir'],
     ),
+    */
     array(
         'icon' => 'fa-file',
         'caption' => 'Файлы',
         'controller' => 'CoreFile',
-        'content' => ['dirname', 'file_exists', 'file_get_contents', 'file', 'filesize', 'filetype', 'fopen', 'fread', 'fwrite', 'glob', 'is_executable', 'is_file', 'is_readable', 'is_uploaded_file', 'is_writable', 'mkdir', 'move_uploaded_file', 'pathinfo', 'readfile', 'realpath', 'rename', 'unlink'],
+        'content' => ['dirname', 'fflush', 'file_exists', 'file_get_contents', 'file', 'filesize', 'filetype', 'fopen', 'fread', 'fwrite', 'glob', 'is_executable', 'is_file', 'is_readable', 'is_uploaded_file', 'is_writable', 'mkdir', 'move_uploaded_file', 'pathinfo', 'readfile', 'realpath', 'rename', 'unlink'],
     ),
     array(
         'icon' => 'fa-terminal',
