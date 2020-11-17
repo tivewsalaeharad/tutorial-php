@@ -5,4 +5,7 @@
 
 
     <?=shell_exec('cd .. && ls -al')?>
+
+
+    <?=shell_exec('git -?')?>
 </pre>
