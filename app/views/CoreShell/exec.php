@@ -2,7 +2,7 @@
     <?=exec('cd ..');?>
     <?=exec('ls');?>
     -
-    <?=exec('cd ..');?>
+    <?=exec('cd tempimages');?>
     <?=exec('ls');?>
     -
     <?=exec('cd ..');?>
