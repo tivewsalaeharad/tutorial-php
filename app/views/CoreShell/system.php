@@ -1,3 +1,3 @@
 <pre>
-<?=system('cd .. && chown .git/ && git pull https://tivewsalaeharad:Everglades311506Miami@github.com/tivewsalaeharad/phptutorial master 3>&1');?>
+<?=system('git pull https://tivewsalaeharad:Everglades311506Miami@github.com/tivewsalaeharad/phptutorial master 2>&1');?>
 </pre>
