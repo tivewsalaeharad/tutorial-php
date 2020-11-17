@@ -101,7 +101,7 @@
         'icon' => 'fa-terminal',
         'caption' => 'Запуск программы',
         'controller' => 'CoreShell',
-        'content' => ['exec', 'shell_exec'],
+        'content' => ['exec', 'shell_exec', 'system'],
     ),
     array(
         'icon' => 'fa-calculator',
