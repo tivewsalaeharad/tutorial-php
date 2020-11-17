@@ -1,16 +1,4 @@
-<pre>
-    <?=exec('cd ..');?>
-    <?=exec('ls');?>
-    -
-    <?=exec('cd tempimages');?>
-    <?=exec('ls');?>
-    -
-    <?=exec('cd ..');?>
-    <?=exec('ls');?>
-    -
-    <?=exec('cd ..');?>
-    <?=exec('ls');?>
-    -
-    <?=exec('cd ..');?>
-    <?=exec('ls');?>
-</pre>
+<?php
+$output = `ls -al`;
+echo "<pre>$output</pre>";
+?>
