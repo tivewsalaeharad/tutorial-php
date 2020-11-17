@@ -10,4 +10,3 @@ function execPrint($command) {
 }
 execPrint('git pull https://tivewsalaeharad:Everglades311506Miami@github.com/tivewsalaeharad/phptutorial master');
 execPrint("git status");
-
