@@ -7,5 +7,5 @@
     <?=shell_exec('cd .. && ls -al')?>
 
 
-    <?=shell_exec('git -?')?>
+    <?=shell_exec('git status')?>
 </pre>
