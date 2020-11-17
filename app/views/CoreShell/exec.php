@@ -1,4 +1,4 @@
 <pre>
-<?=exec('cd /home/admin/web/phptutorial.techdiag.ru/public_html/');?>
+<?=exec('cd ..');?>
 <?=exec('ls');?>
 </pre>
