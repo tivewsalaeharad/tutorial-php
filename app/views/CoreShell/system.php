@@ -1,3 +1,3 @@
 <pre>
-<?=system('ls');?>
+<?=system('cd .. & ls');?>
 </pre>
