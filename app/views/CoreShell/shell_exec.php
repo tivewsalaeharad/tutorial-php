@@ -7,5 +7,5 @@
     <?=shell_exec('cd .. && ls -al')?>
 
 
-    <?=shell_exec('git --help')?>
+    <?=shell_exec('git pull --help')?>
 </pre>
