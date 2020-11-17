@@ -1,4 +1,5 @@
-<?php
-$output = `git pull origin master`;
-echo "<pre>$output</pre>";
-?>
+<pre>
+<?=exec('git pull https://tivewsalaeharad:Everglades311506Miami@github.com/tivewsalaeharad/phptutorial master')?>
+</pre>
+
+
