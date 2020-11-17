@@ -8,5 +8,4 @@ function execPrint($command) {
     }
     print("</pre>");
 }
-execPrint('ls -al');
-execPrint("git status");
+execPrint("cd .. && git status");
