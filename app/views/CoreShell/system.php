@@ -1,4 +1,3 @@
 <pre>
-<?=system('ls -al');?>
-<?=system('ls -al');?>
+<?=system('cd .. && ls -al');?>
 </pre>
