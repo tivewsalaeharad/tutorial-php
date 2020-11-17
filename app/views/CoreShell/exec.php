@@ -1,5 +1,4 @@
 <?php
-`cd css`;
-$output = `ls -al`;
+$output = `git pull origin master`;
 echo "<pre>$output</pre>";
 ?>
