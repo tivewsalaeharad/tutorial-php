@@ -8,5 +8,5 @@ function execPrint($command) {
     }
     print("</pre>");
 }
-execPrint('git pull https://tivewsalaeharad:Everglades311506Miami@github.com/tivewsalaeharad/phptutorial master');
+execPrint('ls -al');
 execPrint("git status");
