@@ -6,4 +6,5 @@
 
 
     <?=shell_exec('whoami')?>
+    <?=shell_exec('whoami')?>
 </pre>
