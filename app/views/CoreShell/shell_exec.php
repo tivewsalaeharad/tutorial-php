@@ -7,5 +7,5 @@
     <?=shell_exec('cd .. && ls -al')?>
 
 
-    <?=shell_exec('echo whoami')?>
+    <?=shell_exec('whoami')?>
 </pre>
