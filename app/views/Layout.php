@@ -66,6 +66,7 @@
 
     <div id="page-wrapper">
         <pre class='prettyprint' style="padding: 10px;"><?=htmlspecialchars(file_get_contents($code))?></pre>
+        <?php /*<div style="background-color: #f9f2f4; padding: 10px;"><?php highlight_file($code)?></div>*/ ?>
         <div><?=$body?></div>
     </div>
 </div>

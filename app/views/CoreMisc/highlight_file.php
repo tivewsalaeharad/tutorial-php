@@ -1,0 +1,1 @@
+<pre><?=htmlspecialchars(highlight_file('../app/views/CoreString/explode.php', true))?></pre>
