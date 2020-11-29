@@ -94,7 +94,7 @@
         'icon' => 'fa-file',
         'caption' => 'Файлы',
         'controller' => 'CoreFile',
-        'content' => ['dirname', 'fflush', 'file_exists', 'file_get_contents', 'file', 'filesize', 'filetype', 'fopen', 'fread', 'fwrite', 'glob', 'is_executable', 'is_file', 'is_readable', 'is_uploaded_file', 'is_writable', 'mkdir', 'move_uploaded_file', 'pathinfo', 'readfile', 'realpath', 'rename', 'unlink'],
+        'content' => ['dirname', 'fflush', 'file_exists', 'file_get_contents', 'file', 'filesize', 'filetype', 'fnmatch', 'fopen', 'fread', 'fwrite', 'glob', 'is_executable', 'is_file', 'is_readable', 'is_uploaded_file', 'is_writable', 'mkdir', 'move_uploaded_file', 'pathinfo', 'readfile', 'realpath', 'rename', 'unlink'],
     ),
     array(
         'icon' => 'fa-terminal',
