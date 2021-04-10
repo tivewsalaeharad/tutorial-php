@@ -12,4 +12,6 @@ spl_autoload_register(function($class) {
 $o1 = new Class1();
 $o2 = new Class2();
 
-?>
+echo "<pre>";
+print_r(spl_autoload_functions());
+echo "</pre>";

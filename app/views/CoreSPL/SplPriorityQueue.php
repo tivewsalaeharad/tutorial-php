@@ -1,5 +1,3 @@
-<pre>
-</pre>
 <?php
 
 class PQtest extends SplPriorityQueue
@@ -17,6 +15,7 @@ $objPQ->insert('B',6);
 $objPQ->insert('C',1);
 $objPQ->insert('D',2);
 echo "COUNT->".$objPQ->count()."<BR>";
+echo "FLAGS->".$objPQ->getExtractFlags()."<BR>";
 $objPQ->setExtractFlags(PQtest::EXTR_BOTH);
 $objPQ->top();
 
@@ -26,4 +25,4 @@ while($objPQ->valid()){
     $objPQ->next();
 }
 
-?>
+echo "COUNT->".$objPQ->count()."<BR>";

@@ -119,7 +119,12 @@
         'icon' => 'fa-list',
         'caption' => 'Standard PHP Library',
         'controller' => 'CoreSPL',
-        'content' => ['SplDoublyLinkedList', 'SplStack', 'SplQueue', 'SplMaxHeap', 'SplMinHeap', 'SplPriorityQueue', 'SplFixedArray', 'SplObjectStorage', 'ArrayObject', 'spl_autoload_register'],
+        'content' => [
+            'SplDoublyLinkedList', 'SplStack', 'SplQueue', 'SplMaxHeap', 'SplMinHeap', 'SplPriorityQueue', 'SplFixedArray', 'SplObjectStorage',
+            'AppendIterator', 'CachingIterator', 'CallbackFilterIterator', 'DirectoryIterator', 'InfiniteIterator', 'MultipleIterator', 'ParentIterator', 'RecursiveArrayIterator', 'RecursiveTreeIterator', 'SeekableIterator',
+            'ArrayObject',
+            'spl_autoload_call', 'spl_autoload_register', 'spl_classes'
+        ],
     ),
     array(
         'icon' => 'fa-quote-right',
@@ -131,7 +136,7 @@
         'icon' => 'fa-calculator',
         'caption' => 'BC Math',
         'controller' => 'BundledBCMath',
-        'content' => ['bcmul', 'bcsqrt'],
+        'content' => ['bcdiv', 'bcmul', 'bcsqrt'],
     ),
     array(
         'icon' => 'fa-code',
