@@ -108,7 +108,6 @@
         'controller' => 'CoreMath',
         'content' => ['max', 'rand'],
     ),
-    */
     array(
         'icon' => 'fa-random',
         'caption' => 'Misc.',
@@ -122,10 +121,18 @@
         'content' => [
             'SplDoublyLinkedList', 'SplStack', 'SplQueue', 'SplMaxHeap', 'SplMinHeap', 'SplPriorityQueue', 'SplFixedArray', 'SplObjectStorage',
             'AppendIterator', 'CachingIterator', 'CallbackFilterIterator', 'DirectoryIterator', 'InfiniteIterator', 'MultipleIterator', 'ParentIterator', 'RecursiveArrayIterator', 'RecursiveTreeIterator', 'SeekableIterator',
-            'ArrayObject',
+            'ArrayObject', 'SplFileInfo', 'SplFileObject', 'SplObserver', 'SplSubject',
             'spl_autoload_call', 'spl_autoload_register', 'spl_classes'
         ],
     ),
+    */
+    array(
+        'icon' => 'fa-bars',
+        'caption' => 'Потоки',
+        'controller' => 'CoreStreams',
+        'content' => ['stream_filter_append', 'stream_filter_register'],
+    ),
+
     array(
         'icon' => 'fa-quote-right',
         'caption' => 'Строки',
