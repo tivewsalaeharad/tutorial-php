@@ -4,7 +4,15 @@
 class strtoupper_filter extends php_user_filter {
     function filter($in, $out, &$consumed, $closing)
     {
+
+        var_dump($in);
+        echo "<br>";
+
         while ($bucket = stream_bucket_make_writeable($in)) {
+
+            var_dump($bucket);
+            echo "<br>";
+
             $bucket->data = strtoupper($bucket->data);
             $consumed += $bucket->datalen;
             stream_bucket_append($out, $bucket);
@@ -13,7 +21,7 @@ class strtoupper_filter extends php_user_filter {
     }
 }
 
-/* Регистрируем наш фильтр в  PHP */
+/* Регистрируем наш фильтр в PHP */
 stream_filter_register("strtoupper", "strtoupper_filter")
 or die("Не удалось зарегистрировать фильтр");
 
