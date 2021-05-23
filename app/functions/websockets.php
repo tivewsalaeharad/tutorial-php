@@ -44,6 +44,13 @@ function wrap($msg = "")
 
 }
 
+function sendMessage($socket_array, $message)
+{
+    foreach ($socket_array as $socket) {
+        @socket_write($socket, wrap($message));
+    }
+}
+
 $port = 8090;
 //$host = 'localhost';
 
@@ -52,52 +59,45 @@ $server = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 socket_set_option($server, SOL_SOCKET, SO_REUSEADDR, 1);
 socket_bind($server, 0, $port);
 socket_listen($server);
-$client = socket_accept($server);
 
 $client_socket_array = [$server];
-
-// Send WebSocket handshake headers.
-writeHandshakeHeaders($client);
 
 // Send messages into WebSocket in a loop.
 while (true) {
 
-    /*
     $new_socket_array = $client_socket_array;
-    $null_array =[];
+    $null_array = [];
     socket_select($new_socket_array, $null_array, $null_array, 0, 10);
 
     if (in_array($server, $new_socket_array)) {
         $new_socket = socket_accept($server);
-
         $client_socket_array[] = $new_socket;
-
         // Send WebSocket handshake headers.
         writeHandshakeHeaders($new_socket);
-        //
-        socket_getpeername($new_socket, $client_ip_address);
-        //foreach ($client_socket_array as $client_socket) {
-            socket_write($client, "Соедниение установлено. IP = ".$client_ip_address);
-        //}
 
+        socket_getpeername($new_socket, $client_ip_address);
+        sendMessage($client_socket_array, "Присоединение: " . $client_ip_address .
+            ' [Всего: ' . count($client_socket_array) . ']');
 
         $new_socket_array_index = array_search($server, $new_socket_array);
         unset($new_socket_array[$new_socket_array_index]);
 
     }
 
-    //foreach ($new_socket_array as $new_socket_array_resource) {
-        // Send messages into WebSocket in a loop.
-        sleep(1);
-        $content = 'Сейчас: ' . date('d M Y (D) H:i:s');
-        $response = chr(129) . chr(strlen($content)) . $content;
-        //foreach ($client_socket_array as $client_socket) {
-            socket_write($client, $response);
-        //}
-    //}
-    */
+    foreach ($new_socket_array as $new_socket_array_resource) {
+
+        $socketData = @socket_read($new_socket_array_resource, 1024, PHP_NORMAL_READ);
+        if ($socketData === false) {
+            socket_getpeername($new_socket_array_resource, $client_ip_address);
+            $new_socket_array_index = array_search($new_socket_array_resource, $client_socket_array);
+            unset($client_socket_array[$new_socket_array_index]);
+            sendMessage($client_socket_array, "Отсоединение: " . $client_ip_address .
+                ' [Всего: ' . count($client_socket_array) . ']');
+        }
+
+   }
 
     sleep(1);
-    $content = 'Сейчас: ' . date('d M Y (D) H:i:s');
-    socket_write($client, wrap($content));
+    sendMessage($client_socket_array, 'Сейчас: ' . date('d M Y (D) H:i:s'));
+
 }

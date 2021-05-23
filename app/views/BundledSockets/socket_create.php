@@ -5,6 +5,9 @@
     socket.onmessage = function(e) {
         document.getElementById('root').innerHTML = e.data;
     };
+    socket.onclose = function (e) {
+        document.getElementById('root').innerHTML = 'Соединение прервано';
+    }
 </script>
 <pre class='prettyprint' style="padding: 10px;">
 <?=htmlspecialchars(file_get_contents('../app/functions/websockets.php'))?>
