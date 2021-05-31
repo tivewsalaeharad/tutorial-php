@@ -16,7 +16,7 @@ function writeHandshakeHeaders($socket)
     socket_write($socket, $headers, strlen($headers));
 }
 
-function wrap($msg = "")
+function wrap($msg)
 {
     $length = strlen($msg);
 
@@ -57,7 +57,7 @@ $port = 8090;
 // Create WebSocket.
 $server = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 socket_set_option($server, SOL_SOCKET, SO_REUSEADDR, 1);
-socket_bind($server, 0, $port);
+socket_bind($server, '127.0.0.1', $port);
 socket_listen($server);
 
 $client_socket_array = [$server];

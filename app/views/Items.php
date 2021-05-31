@@ -124,13 +124,19 @@
             'ArrayObject', 'SplFileInfo', 'SplFileObject', 'SplObserver', 'SplSubject',
             'spl_autoload_call', 'spl_autoload_register', 'spl_classes'
         ],
-    ),stream_context_create
-    */
+    ),
     array(
         'icon' => 'fa-bars',
         'caption' => 'Потоки',
         'controller' => 'CoreStreams',
-        'content' => ['stream_context_create', 'stream_context_get_default', 'stream_copy_to_stream', 'stream_filter_append', 'stream_filter_register', 'stream_get_filters', 'stream_get_line', 'stream_get_meta_data', 'stream_get_transports', 'stream_get_wrappers', 'stream_is_local', 'stream_notification_callback', 'stream_resolve_include_path', 'stream_select', 'stream_set_timeout', 'stream_wrapper_register'],
+        'content' => ['stream_context_create', 'stream_context_get_default', 'stream_copy_to_stream', 'stream_filter_append', 'stream_filter_register', 'stream_get_filters', 'stream_get_line', 'stream_get_meta_data', 'stream_get_transports', 'stream_get_wrappers', 'stream_is_local', 'stream_notification_callback', 'stream_resolve_include_path', 'stream_select', 'stream_set_timeout', 'stream_socket_client', 'stream_socket_pair', 'stream_socket_server', 'stream_wrapper_register'],
+    ),
+    */
+    array(
+        'icon' => 'fa-font',
+        'caption' => 'Лексер (токенайзер)',
+        'controller' => 'CoreTokenizer',
+        'content' => ['token_get_all'],
     ),
     array(
         'icon' => 'fa-wifi',
