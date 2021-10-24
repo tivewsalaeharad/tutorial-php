@@ -1,4 +1,6 @@
-<? $items = array(
+<?php
+
+return [
     /*
     __halt_compiler()
     array()
@@ -64,7 +66,7 @@
         'icon' => 'fa-calendar',
         'caption' => 'Дата и время',
         'controller' => 'CoreDateTime',
-        'content' => ['DateTimeImmutable', 'date_sunrise', 'date_sunset', 'date', 'strftime', 'strtotime'],
+        'content' => ['DateTimeImmutable', 'date_sunrise', 'date_sunset', 'date', 'mktime', 'strftime', 'strtotime'],
     ),
     array(
         'icon' => 'fa-bug',
@@ -132,78 +134,78 @@
         'content' => ['stream_context_create', 'stream_context_get_default', 'stream_copy_to_stream', 'stream_filter_append', 'stream_filter_register', 'stream_get_filters', 'stream_get_line', 'stream_get_meta_data', 'stream_get_transports', 'stream_get_wrappers', 'stream_is_local', 'stream_notification_callback', 'stream_resolve_include_path', 'stream_select', 'stream_set_timeout', 'stream_socket_client', 'stream_socket_pair', 'stream_socket_server', 'stream_wrapper_register'],
     ),
     */
-    array(
+    [
         'icon' => 'fa-font',
         'caption' => 'Лексер (токенайзер)',
         'controller' => 'CoreTokenizer',
         'content' => ['token_get_all'],
-    ),
-    array(
+    ],
+    [
         'icon' => 'fa-wifi',
         'caption' => 'Сеть',
         'controller' => 'CoreNetwork',
         'content' => ['getprotobynumber'],
-    ),
+    ],
 
-    array(
+    [
         'icon' => 'fa-quote-right',
         'caption' => 'Строки',
         'controller' => 'CoreString',
-        'content' => ['explode', 'htmlentities', 'htmlspecialchars', 'implode', 'md5', 'printf', 'quoted_printable_encode', 'sprintf', 'str_ireplace', 'str_split', 'strlen', 'strpos', 'str_repeat', 'str_replace', 'strrev', 'strtr', 'substr_count', 'trim'],
-    ),
-    array(
+        'content' => ['explode', 'htmlentities', 'htmlspecialchars', 'implode', 'md5', 'printf', 'quoted_printable_encode', 'sprintf', 'str_ireplace', 'str_split', 'strlen', 'strpos', 'str_repeat', 'str_replace', 'strrev', 'strtok', 'strtr', 'substr_count', 'trim'],
+    ],
+    [
         'icon' => 'fa-calculator',
         'caption' => 'BC Math',
         'controller' => 'BundledBCMath',
         'content' => ['bcdiv', 'bcmul', 'bcsqrt'],
-    ),
-    array(
+    ],
+    [
         'icon' => 'fa-code',
         'caption' => 'JSON',
         'controller' => 'BundledJSON',
         'content' => ['json_decode', 'json_encode'],
-    ),
-    array(
+    ],
+    [
         'icon' => 'fa-plug',
         'caption' => 'Сокеты',
         'controller' => 'BundledSockets',
         'content' => ['socket_create'],
-    ),
-    array(
+    ],
+    [
         'icon' => 'fa-align-left',
         'caption' => 'PCRE',
         'controller' => 'BundledPCRE',
-        'content' => ['preg_match', 'preg_match_all'],
-    ),
-    array(
+        'content' => ['preg_filter', 'preg_match', 'preg_match_all'],
+    ],
+    [
         'icon' => 'fa-image',
         'caption' => 'Изображения',
         'controller' => 'BundledImages',
         'content' => ['imagepng'],
-    ),
-    array(
+    ],
+    [
         'icon' => 'fa-quote-left',
         'caption' => 'Многобайтовые строки',
         'controller' => 'BundledMultibyte',
         'content' => ['mb_strimwidth', 'mb_substr'],
-    ),
-    array(
+    ],
+    [
         'icon' => 'fa-server',
         'caption' => 'cURL',
         'controller' => 'ExternalCURL',
         'content' => ['curl_exec'],
-    ),
-    array(
+    ],
+    [
         'icon' => 'fa-database',
         'caption' => 'MySQLi',
         'controller' => 'ExternalMySQLi',
         'content' => ['mysqli_connect'],
-    ),
-    array(
+    ],
+    [
         'icon' => 'fa-file',
         'caption' => 'PDF',
         'controller' => 'PECL_PDF',
         'content' => ['PDFlib'],
-    )
-);
+    ]
+];
 

@@ -1,13 +1,28 @@
 <?php
-echo "<pre>";
-preg_match_all("|<[^>]+>(.*)</[^>]+>|U", "<b>пример: </b><div align=left>это тест</div>", $out, PREG_PATTERN_ORDER);
-echo $out[0][0] . ", " . $out[0][1] . "\n";
-echo $out[1][0] . ", " . $out[1][1] . "\n";
-preg_match_all('/(?J)(?<match>foo)|(?<match>bar)/', 'foo bar', $matches, PREG_PATTERN_ORDER);
-print_r($matches['match']);
-preg_match_all("|<[^>]+>(.*)</[^>]+>|U", "<b>пример: </b><div align=\"left\">это тест</div>", $out, PREG_SET_ORDER);
-echo $out[0][0] . ", " . $out[0][1] . "\n";
-echo $out[1][0] . ", " . $out[1][1] . "\n";
-preg_match_all('/(foo)(bar)(baz)/', 'foobarbaz', $matches, PREG_OFFSET_CAPTURE);
-print_r($matches);
-echo "</pre>";
+$examples = [
+    ['/o/', 'hello world'],
+    ['/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/', 'my@domain.ru'],
+    ['|<[^>]+>(.*)</[^>]+>|U',  '<b>пример: </b><div align=left>это тест</div>', 'PREG_PATTERN_ORDER'],
+    ['/(?J)(?<match>foo)|(?<match>bar)/', 'foo bar', 'PREG_PATTERN_ORDER'],
+    ['|<[^>]+>(.*)</[^>]+>|U', '<b>пример: </b><div align=\"left\">это тест</div>', 'PREG_SET_ORDER'],
+    ['/(foo)(bar)(baz)/', 'foobarbaz', 'PREG_OFFSET_CAPTURE'],
+    ['', '']
+];
+
+echo '<table border="1" class="text-center"><tr><td>REGEX</td><td>TEXT</td><td>FLAG</td><td>RESULT</td><td>MATCHES</td><tr>';
+foreach ($examples as $example) {
+    $regexp = $example[0];
+    $text = $example[1];
+    $flag = isset($example[2]) ? constant($example[2]) : 0;
+    $offset = isset($example[3]) ? $example[3] : 0;
+    $flag_text = isset($example[2]) ? $example[2] . ($offset ? '(' . $offset . ')' : '') : '';
+    $result = preg_match_all($regexp, $text, $match, $flag);
+    echo "<tr><td>$regexp</td><td>$text</td><td>$flag_text</td><td>$result</td><td>";
+    foreach ($match as $key => $element) {
+        echo "<u>$key</u><br>";
+        var_export($element);
+        echo "<br>";
+    }
+    echo "</td></tr>";
+}
+echo "<table>";

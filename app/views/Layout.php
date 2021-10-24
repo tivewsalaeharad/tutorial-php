@@ -1,4 +1,4 @@
-<? require "Items.php"; ?>
+<? $items = require "Items.php"; ?>
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
 
