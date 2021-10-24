@@ -2,12 +2,15 @@
 $examples = [
     ['/o/', 'hello world'],
     ['/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/', 'my@domain.ru'],
+    ['/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/', 'abc.test@gmail.com, xyz@test.in, test.first@analyticsvidhya.com, first.test@rest.biz'],
+    //['/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/', 'abc.test@gmail.com, xyz@test.in, test.first@analyticsvidhya.com, first.test@rest.biz'],
     ['/[a-zA-Zа-яА-Я]/', '+7(495)250-47-89'],
     ['/(foo)(bar)(baz)/', 'foobarbaz', 'PREG_OFFSET_CAPTURE'],
     ['/(a)(b)*(c)/', 'ac'],
     ['/(a)(b)*(c)/', 'ac', 'PREG_UNMATCHED_AS_NULL'],
     ['/^def/', 'abcdef', 'PREG_OFFSET_CAPTURE', 3],
     ['/^def/', substr('abcdef',3), 'PREG_OFFSET_CAPTURE'],
+    //['', ''],
 ];
 
 echo '<table border="1" class="text-center"><tr><td>REGEX</td><td>TEXT</td><td>FLAG</td><td>RESULT</td><td>MATCHES</td><tr>';

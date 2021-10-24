@@ -175,7 +175,7 @@ return [
         'icon' => 'fa-align-left',
         'caption' => 'PCRE',
         'controller' => 'BundledPCRE',
-        'content' => ['preg_filter', 'preg_match', 'preg_match_all'],
+        'content' => ['preg_filter', 'preg_match', 'preg_match_all', 'preg_split'],
     ],
     [
         'icon' => 'fa-image',
